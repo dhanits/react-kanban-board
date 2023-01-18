@@ -1,0 +1,13 @@
+.todos-area{
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.todos{
+    min-width: 15rem;
+    /* flex: 1;  */
+    background: #F2F2F3;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+}
