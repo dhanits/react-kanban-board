@@ -13,7 +13,7 @@ function App() {
         <div class="App-body">
 
             <Todo/>
-            {/* <Card/> */}
+
         </div>
 
     </div>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Todo.css';
 import axios from 'axios';
+import Card from '../card';
 axios.defaults.headers.common = {'Authorization': 'bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMTIsImV4cCI6MTY4MjU3MDU4OX0.TT2yZMWcD0WFF70PKSP4KYkdG7FsPz-gSxGW4TwaCWU'}
 
 const data = [
@@ -22,15 +23,18 @@ const Todo = () => {
             .catch(err => console.log(err));
     }, [])
 
-    console.log(todos);
-
   return (
     <div class="todos-area">
-        {/* Kanban */}
         {
-            todos.map(element => {
+            todos.map((element, key) => {
                 return (
-                    <div class="todos">{element.title}</div>
+                    <div class="todos" key="{key}">
+                        {element.title}
+
+                        <Card
+                            todoId = {element.id}
+                        />
+                    </div>
                 )
             })
         }
